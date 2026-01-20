@@ -259,6 +259,145 @@ body::before {
     font-weight: 500;
 }
 
+.achievement-badge {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.s1-trophy-link {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.15) 100%);
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.s1-trophy-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 140, 0, 0.2) 100%);
+}
+
+.trophy-image-container {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+
+.trophy-image-card {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trophy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background-color: white;
+    padding: 10px;
+}
+
+.trophy-image-label-top {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--primary-color);
+    padding: 6px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    line-height: 1.3;
+    z-index: 10;
+}
+
+.trophy-label-line1 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+.trophy-label-line2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+.trophy-image-label-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+}
+
+.trophy-year {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.trophy-win {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.trophy-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.trophy-label {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    line-height: 1.3;
+}
+
+.trophy-label::before {
+    content: '🏆';
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.trophy-subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 0.95;
+    line-height: 1.4;
+}
+
 .sections-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -629,6 +768,60 @@ body::before {
         font-size: 1.2rem;
     }
 
+    .s1-trophy-link {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .trophy-image-container {
+        align-items: center;
+    }
+
+    .trophy-image-card {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .trophy-image {
+        padding: 8px;
+    }
+
+    .trophy-image-label-top {
+        top: 10px;
+        left: 10px;
+        padding: 5px 8px;
+    }
+
+    .trophy-label-line1,
+    .trophy-label-line2 {
+        font-size: 0.75rem;
+    }
+
+    .trophy-year {
+        font-size: 0.9rem;
+    }
+
+    .trophy-win {
+        font-size: 1.1rem;
+    }
+
+    .trophy-label {
+        font-size: 1.6rem;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .trophy-label::before {
+        font-size: 2rem;
+    }
+
+    .trophy-subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+
     .sections-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -791,6 +984,78 @@ body::before {
     color: #666;
 }
 
+.media-featured {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.featured-article-link {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    padding: 0;
+    margin: 0;
+    background: white;
+    width: 100%;
+}
+
+.featured-article-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.featured-article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    object-fit: contain;
+    background-color: white;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+}
+
+.featured-article-text {
+    padding: 1.5rem 2rem;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.featured-article-title {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.6;
+    display: block;
+    transition: color 0.3s ease;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.featured-article-title .title-part1 {
+    white-space: nowrap;
+    display: inline;
+    margin-left: -0.5em;
+    padding-left: 0;
+}
+
+.featured-article-link:hover .featured-article-title {
+    color: var(--primary-color);
+}
+
 .read-more {
     display: inline-flex;
     align-items: center;
@@ -920,6 +1185,14 @@ body::before {
 
     .featured-note {
         padding: 0.6rem 1rem;
+    }
+
+    .featured-article-text {
+        padding: 1rem;
+    }
+
+    .featured-article-title {
+        font-size: 0.85rem;
     }
 }
 
