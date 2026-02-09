@@ -1203,7 +1203,7 @@ body::before {
     color: var(--text-color);
     font-size: 0.95rem;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.7;
     display: block;
     transition: color 0.3s ease;
     word-break: keep-all;
@@ -1213,11 +1213,22 @@ body::before {
     padding: 0;
 }
 
+.featured-article-title br {
+    display: block;
+    content: "";
+    margin-top: 0.3em;
+}
+
 .featured-article-title .title-part1 {
     white-space: nowrap;
     display: inline;
     margin-left: -0.5em;
     padding-left: 0;
+}
+
+.featured-article-title .title-line1 {
+    white-space: nowrap;
+    display: inline;
 }
 
 .featured-article-link:hover .featured-article-title {
